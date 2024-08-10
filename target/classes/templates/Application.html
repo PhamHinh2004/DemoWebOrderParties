@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/bootstrap.css">
+    <link rel="stylesheet" href="../static/css/Application.css">
+    <link rel="stylesheet" href="../static/css/bootstrap.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container-fluid px-0">
+        <div class="header">
+            <img src="../static/img/image.png" alt="">
+        </div>
+        <div class="nav-bar">
+            <ul>
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Tổ chức</a></li>
+                <li>
+                <div class="dropdown" >
+                    <a href=""  class="dropdown-toggle" data-bs-toggle="dropdown">Đăng ký đặt chỗ</a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item" data-bs-toggle="modal" data-bs-target="#myModal" >mở modal</li>
+                    </ul>
+                </div>
+            </li>
+            </ul>
+        </div>
+        <div class="nav-body">
+            <div class="nav-left">
+                <table class="table table-js" id="data-table">
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>Họ Tên</th>
+                            <th>Điện Thoại</th>
+                            <th>Ngày nhận tiệc</th>
+                            <th>Giờ nhận tiệc</th>
+                            <th>Số người</th>
+                            <th>Loại tiệc</th>
+                            <th>Loại thường</th>
+                            <th>Thành viên</th>
+                            <th>Dịch vụ đi kèm</th>
+                            <th>Ghi chú</th>
+                            <th>Tools</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- <tr>
+                            <td>00</td>
+                            <td>Lê Lan</td>
+                            <td>0909666777</td>
+                            <td>01/01/2020</td>
+                            <td>11:20</td>
+                            <td>15</td>
+                            <td>Buffet</td>
+                            <td>VIP</td>
+                            <td>Thành viên</td>
+                            <td>Hoa tươi</td>
+                            <td>Có trẻ em</td>
+                            <td>
+                                <form th:action="@{/Success}" method="get">
+                                    <button class="btn btn-success" style="width: 100%; margin: 3px 0px;" >Delete</button>
+                                </form>
+                                <button class="btn btn-primary" id="update-js" style="width: 100%; margin: 3px 0px;" >Update</button>
+                            </td>
+                        </tr> -->
+                    </tbody>
+                </table>
+            </div>
+            <!-- <div class="nav-right"> -->
+                <div class="nav-right-container">
+                    <div class="nav-right-header">
+                        <h1 style="color: red;">Đặt Chỗ</h1>
+                    </div>
+                    <table class="table">
+                        <tr>
+                            <td style="color: red;">Nhóm gia đình</td>
+                        </tr>
+                        <tr>
+                            <td style="color: red;">Tiệc sinh nhật</td>
+                        </tr>
+                        <tr>
+                            <td style="color: red;">Nhóm văn phòng</td>
+                        </tr>
+                    </table>
+                    <div class="contact">
+                        <h1 style="color: red;">Contact</h1>
+                        <p>Gọi tới: <span style="background-color: antiquewhite;">1900 6005</span>-Để đặt chỗ và được tư vấn</p>
+                        <p> Địa chỉ: 13 Trần Bình Trọng - Quận 1 - TP.HCM</p>
+                    </div>
+                    <div class="trend">
+                        <h1 style="color: red;">Bài viết Nổi Bật</h1>
+                        <ul>
+                            <li>    
+                                1. <a href="#">Kinh nghiệm sinh nhật cho bé</a>
+                            </li>
+                            <li>
+                                2. <a href="#">Đặc sản các miền</a>
+                            </li>
+                            <li>
+                                3. <a href="#">Văn hóa ẩm thực Sài Gòn</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            <!-- </div> -->
+        </div>
+        <div class="nav-footer">
+            <span>@Copyright Food Circles</span>
+        </div>
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3>Thông Tin Đặt Tiệc</h3>
+                        <button class="btn btn-close" type="button" data-bs-dismiss="modal"></button>
+                    </div>
+                    <form action="./success.html" method="post" >
+                        <!-- Các trường input ở đây -->
+                        <div class="modal-body">
+                            <table style="width: 100%;">
+                                <tr>
+                                    <td>
+                                        <label for="ten">Họ tên người đặt tiệc: <span style="color: red;">*</span></label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="text" name="ten" id="ten" placeholder="Họ tên" style="width: 100%;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="dienThoai">Điện thoại liên hệ: <span style="color: red;">*</span></label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="text" name="dienThoai" id="dienThoai" placeholder="Điện thoại" style="width: 100%;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="date">Ngày nhận tiệc: <span style="color: red;">*</span></label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="date" name="date" id="date" style="width: 100%;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="time">Giờ nhận tiệc: <span style="color: red;">*</span></label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="time" name="time" id="time" style="width: 100%;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="many">Số người: <span style="color: red;">*</span></label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="text" name="many" id="many" style="width: 100%;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="kind">Loại tiệc: <span style="color: red;">*</span></label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <select name="kind" id="kind" style="width: 100%; padding: 4px 0px;">
+                                            <option value=""></option>
+                                            <option value="SetMenu">Set Menu</option>
+                                            <option value="FingerFood">Finger Food</option>
+                                            <option value="Buffet">Buffet</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span>Loại phòng: <span style="color: red;">*</span></span>
+                                        <input type="radio" name="loaiPhong" id="VIP" value="VIP">
+                                        <label for="VIP">VIP</label>
+                                        <input type="radio" name="loaiPhong" id="Thuong" value="Thường">
+                                        <label for="Thuong">Thường</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="dichvu">
+                                            <span>Dịch vụ đi kèm:</span>
+                                            <input type="checkbox" name="employee" id="employee" value="Nhân viên phục vụ riêng">
+                                            <label for="employee">Nhân viên phục vụ riêng</label>
+                                            <input type="checkbox" name="flower" id="flower" value="Hoa tươi">
+                                            <label for="flower">Hoa tươi</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="thanhVien">
+                                            <span>Thành viên:</span>
+                                            <input type="checkbox" name="member" id="member" value="Nếu bạn là thành viên của quán">
+                                            <label for="member">Nếu bạn là thành viên của quán</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="note">Ghi chú: <span style="color: red;">*</span></label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <textarea name="note" id="note" cols="60" rows="5" placeholder="Không gian thoáng mát"></textarea>
+                                    </td>
+                                </tr>
+                            </table>
+                            <button class="btn btn-danger btn-js" style="width: 100%; margin: 32px 0px;" type="submit">Lưu</button>
+                        </div>
+                    </form>             
+                    <div class="modal-footer">
+                        <h5 style="color: red;">Hotline: 1900 6005</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../static/js/bootstrap.bundle.js"></script>
+    <script src="../static/lib/jquery-3.7.1.min.js"></script>
+    <script src="../static/js/Valitator.js"></script>
+    <script src="../static/js/DeleteAPIParty.js"></script>
+    <script src="../static/js/Party.js"></script>
+    <script src="../static/js/GetAPIParty.js" ></script>
+    <script src="../static/js/Application.js"></script>
+    <script src="../static/js/PostAPIParty.js"></script>
+    <script src="../static/js/HandleButonDelete.js" ></script>
+    <script src="../static/js/HandleButtonUpdate.js"></script>
+</body>
+</html>

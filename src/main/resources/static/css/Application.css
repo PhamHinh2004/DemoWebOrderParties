@@ -1,0 +1,78 @@
+*{
+    /* font-family: 'Times New Roman', Times, serif; */
+   font-size: 15px;
+}
+
+.container-fluid .header img{
+    max-width: 100%;
+    min-width: 100%;
+}
+.header{
+    overflow: hidden;
+}
+
+/* 
+    setting css for nav_bar
+*/
+.container-fluid .nav-bar {
+    background-color: aquamarine;
+}
+.container-fluid .nav-bar ul{
+    padding: 0px;
+    margin: 0px;
+}
+.container-fluid .nav-bar li{
+   display: inline-block;
+   text-align: center;
+   padding: 16px 16px;
+   max-height: 100%;
+}
+.container-fluid .nav-bar li:hover{
+    background-color: gray;
+}
+.container-fluid .nav-bar a{
+    text-decoration: none;
+    text-align: center;
+}
+
+/* 
+     setting css for nav_body
+*/
+.container-fluid .nav-body {
+    margin: 32px 0px 0px 0px;
+    overflow: hidden;
+}
+.container-fluid .nav-body .nav-left{
+    float: left;
+    width: 70%;
+}
+.container-fluid .nav-body .nav-right{
+    float: right;
+    width: 30%;
+    background-color: aquamarine;
+}
+.container-fluid .nav-body .nav-right-container{
+    padding: 16px;
+}
+.nav-right-container .contact p{
+    color: rgb(105, 151, 151);
+}
+.nav-right-container .trend ul{
+    list-style-type: none;
+}
+.nav-right-container .trend a{
+    text-decoration: none;
+    color: rgb(105, 151, 151);
+}
+
+/* 
+    setting css for nav-footer
+*/
+.container-fluid .nav-footer{
+    padding: 16px 0px;
+    background-color: aquamarine;
+}
+.container-fluid .nav-footer span{
+    margin-left: 32px;
+    color: red;
+}

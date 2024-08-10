@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/css/bootstrap.css">
+    <script src="../static/js/bootstrap.bundle.js"></script>
+    <script src="../static/lib/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <div class="container px-0">
+        <!-- Các trường input ở đây -->
+        <div class="modal-body">
+            <table style="width: 100%;">
+                <tr>
+                    <td>
+                        <label for="ten">Họ tên người đặt tiệc: <span style="color: red;">*</span></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" name="ten" id="ten" placeholder="Họ tên" style="width: 100%;">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="dienThoai">Điện thoại liên hệ: <span style="color: red;">*</span></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" name="dienThoai" id="dienThoai" placeholder="Điện thoại"
+                            style="width: 100%;">
+                    </td>
+                </tr>
+                <!-- <tr>
+                    <td>
+                        <label for="date">Ngày nhận tiệc: <span style="color: red;">*</span></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="date" name="date" id="date" style="width: 100%;">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="time">Giờ nhận tiệc: <span style="color: red;">*</span></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="time" name="time" id="time" style="width: 100%;">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="many">Số người: <span style="color: red;">*</span></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" name="many" id="many" style="width: 100%;">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="kind">Loại tiệc: <span style="color: red;">*</span></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select name="kind" id="kind" style="width: 100%; padding: 4px 0px;">
+                            <option value=""></option>
+                            <option value="SetMenu">Set Menu</option>
+                            <option value="FingerFood">Finger Food</option>
+                            <option value="Buffet">Buffet</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>Loại phòng: <span style="color: red;">*</span></span>
+                        <input type="radio" name="loaiPhong" id="VIP" value="VIP">
+                        <label for="VIP">VIP</label>
+                        <input type="radio" name="loaiPhong" id="Thuong" value="Thường">
+                        <label for="Thuong">Thường</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="dichvu">
+                            <span>Dịch vụ đi kèm:</span>
+                            <input type="checkbox" name="employee" id="employee" value="Nhân viên phục vụ riêng">
+                            <label for="employee">Nhân viên phục vụ riêng</label>
+                            <input type="checkbox" name="flower" id="flower" value="Hoa tươi">
+                            <label for="flower">Hoa tươi</label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="thanhVien">
+                            <span>Thành viên:</span>
+                            <input type="checkbox" name="member" id="member" value="Nếu bạn là thành viên của quán">
+                            <label for="member">Nếu bạn là thành viên của quán</label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="note">Ghi chú: <span style="color: red;">*</span></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <textarea name="note" id="note" cols="60" rows="5"
+                            placeholder="Không gian thoáng mát"></textarea>
+                    </td>
+                </tr> -->
+            </table>
+            <form action="./success.html" method="post">
+                <button class="btn btn-danger" id="save-js" style="width: 100%; margin: 32px 0px;" type="submit">Lưu</button>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="../static/js/GetAPIUpdateParty.js"></script>
+<script src="../static/js/UpdateAPIParty.js"></script>
+</html>
